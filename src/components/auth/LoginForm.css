@@ -1,0 +1,108 @@
+/* Fondo del formulario */
+.login-form {
+  width: 100%;
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  box-sizing: border-box;
+}
+
+/* Título */
+.login-title {
+  text-align: center;
+  margin: 0;
+  color: #1e3a8a;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Grupo */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Etiquetas */
+.form-group label {
+  color: #374151;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Inputs */
+.form-group input {
+  padding: 14px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all .3s ease;
+  background: #f9fafb;
+}
+
+/* Focus */
+.form-group input:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* Placeholder */
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+/* Botón */
+.login-form button {
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+/* Hover */
+.login-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* Click */
+.login-form button:active {
+  transform: scale(0.98);
+}
+
+/* Error */
+.error-message {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-form {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  .login-title {
+    font-size: 1.6rem;
+  }
+}
