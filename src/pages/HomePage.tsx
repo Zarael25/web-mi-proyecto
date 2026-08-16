@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 
 
+import Navbar from "../components/Navbar";
 import { authRepository } from "../repositories/authRepository";
+import "./HomePage.css";
 
 
 function HomePage() {
@@ -16,8 +18,10 @@ function HomePage() {
 
 
   return (
-    <main>
-      <h1>Página principal</h1>
+    <>
+      <Navbar username={user?.name} />
+      <main className="home-page__content">
+        <h1>Página principal</h1>
 
 
       {user ? (
@@ -27,14 +31,15 @@ function HomePage() {
           <p>Rol: {user.role}</p>
 
 
-          <button type="button" onClick={handleLogout}>
+          <button className="home-page__logout" type="button" onClick={handleLogout}>
             Cerrar sesión
           </button>
         </>
       ) : (
         <p>No existe una sesión activa.</p>
       )}
-    </main>
+      </main>
+    </>
   );
 }
 
